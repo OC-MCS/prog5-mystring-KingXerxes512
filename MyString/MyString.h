@@ -7,14 +7,14 @@ private:
 public:
 	// Constuctors
 	MyString();
-	MyString(char*);
+	MyString(const char*);
 	MyString(const MyString &obj);
 	// Destructor
 	~MyString();
 	// Overloaded Operators
-	MyString operator+(MyString&);
-	MyString operator=(MyString&);
-	bool operator==(MyString&);
-
-	void writeString();
+	MyString operator+(const MyString&);
+	MyString operator=(const MyString&);
+	bool operator==(const MyString&);
+	// Getter function (returns internal c-string pointer as a const pointer
+	const char* c_str();
 };
