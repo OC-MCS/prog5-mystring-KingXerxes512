@@ -97,21 +97,16 @@ MyString::~MyString()
 	delete[] string;
 }
 
-//void MyString::writeString()
-//{
-//	cout << string;
-//}
-
 // c_str() Function
 // Returns the char* dubbed "string" of the instance called on
-const char* MyString::c_str()
+const char* MyString::c_str() const
 {
 	return string;
 }
 
-// << Operator Overload
-ostream& operator<<(ostream& strm, const MyString& s2)
+// Output << Operator Overload
+ostream& operator<<(ostream& strm, const MyString& s1)
 {
-	strm << *s2.c_str();
+	strm << s1.c_str();
 	return strm;
 }

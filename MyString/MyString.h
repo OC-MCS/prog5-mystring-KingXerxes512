@@ -1,4 +1,7 @@
 #pragma once
+#include <iostream>
+
+using namespace std;
 
 class MyString
 {
@@ -16,5 +19,7 @@ public:
 	MyString operator=(const MyString&);
 	bool operator==(const MyString&);
 	// Getter function (returns internal c-string pointer as a const pointer
-	const char* c_str();
+	const char* c_str() const;
 };
+
+ostream& operator<<(ostream& strm, const MyString& s1);
